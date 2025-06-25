@@ -12,13 +12,13 @@ public class CheckGuest {
         "Bebe Vio", "Luis", "Pardis Zarei", "Martina Maccherone", "Rachel Zeilic" };
 
     System.out.println("Inserire il proprio nome");
-    guestName = sc.nextLine();
-
-    // System.out.println(guestName);
+    guestName = sc.nextLine().replaceAll("\\s+", "").toLowerCase();
 
     for (int i = 0; i < guests.length; i++) {
 
-      if (guests[i].equals(guestName)) {
+      String currentGuest = guests[i].replaceAll("\\s+", "").toLowerCase();
+
+      if (currentGuest.equals(guestName)) {
         System.out.println("Ciao " + guests[i] + ", ti do il benvenuto a questa esclusiva festa a casa Ferragnez.");
         break;
       } else if (i == guests.length - 1) {
