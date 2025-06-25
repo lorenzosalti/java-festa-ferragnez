@@ -14,6 +14,18 @@ public class CheckGuest {
     System.out.println("Inserire il proprio nome");
     guestName = sc.nextLine();
 
-    System.out.println(guestName);
+    // System.out.println(guestName);
+
+    for (int i = 0; i < guests.length; i++) {
+
+      if (guests[i].equals(guestName)) {
+        System.out.println("Ciao " + guests[i] + ", ti do il benvenuto a questa esclusiva festa a casa Ferragnez.");
+        break;
+      } else if (i == guests.length - 1) {
+        System.out.println("Mi spiace Coso, ma non sei sulla lista. Torna da TonyEffe.");
+      }
+
+    }
+
   }
 }
